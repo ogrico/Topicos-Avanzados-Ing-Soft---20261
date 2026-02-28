@@ -1,0 +1,40 @@
+<div class="container">
+  <h1>Gestión de Pedidos</h1>
+
+  <app-loading-spinner [isLoading]="isLoading" message="Cargando pedidos..."></app-loading-spinner>
+
+  <div class="error-message" *ngIf="errorMessage">
+    {{ errorMessage }}
+  </div>
+
+  <div class="table-container" *ngIf="!isLoading && orders.length > 0">
+    <table class="orders-table">
+      <thead>
+        <tr>
+          <th>ID Pedido</th>
+          <th>Usuario ID</th>
+          <th>Total</th>
+          <th>Estado</th>
+          <th>Fecha</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let order of orders" class="order-row">
+          <td>{{ order.id }}</td>
+          <td>{{ order.userId }}</td>
+          <td>${{ order.total }}</td>
+          <td>
+            <span class="status-badge" [class]="getStatusBadgeClass(order.status)">
+              {{ order.status }}
+            </span>
+          </td>
+          <td>{{ order.createdAt | date: 'short' }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="empty-state" *ngIf="!isLoading && orders.length === 0">
+    <p>No se encontraron pedidos</p>
+  </div>
+</div>

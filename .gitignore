@@ -1,0 +1,205 @@
+# ============================================
+# IGNORES GENERALES PARA TODAS LAS APLICACIONES
+# ============================================
+
+# Node.js y npm
+node_modules/
+package-lock.json
+yarn.lock
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-lock.yaml
+
+# Build outputs y distribuciones
+dist/
+build/
+out-tsc/
+.next/
+.nuxt/
+*.egg-info/
+.eggs/
+*.so
+*.o
+*.pyc
+__pycache__/
+
+# Angular
+.angular/
+*.ngfactory.ts
+*.ngstyle.ts
+
+# IDEs y Editores
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+.history/
+
+# Testing y Coverage
+coverage/
+.nyc_output/
+*.lcov
+karma/
+test-results/
+junit.xml
+
+# Dependencias
+/node_modules
+/.pnp
+.pnp.js
+pip-cache/
+.venv/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Logs
+logs/
+*.log
+debug.log
+npm-debug.log
+
+# Variables de entorno
+.env
+.env.local
+.env.*.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Archivos temporales y caché
+tmp/
+temp/
+*.tmp
+*.bak
+.cache/
+.eslintcache
+.TypeScriptCompilerCache/
+*.tsbuildinfo
+
+# Sistema Operativo
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+desktop.ini
+Thumbs.db
+.AppleDouble
+.LSOverride
+
+# Archivos de sincronización
+.sync/
+.SyncIgnore
+OneDriveTemp/
+
+# Herramientas de compilación
+.sass-cache/
+*.css.map
+*.js.map
+
+# Herramientas de desarrollo
+.serverless/
+.serverless_plugins/
+.firebase/
+.firebaserc
+
+# Docker
+.dockerignore
+docker-compose.override.yml
+
+# Kubernetes
+.kube/
+
+# Git
+.git/
+.gitkeep
+
+# Archivos de configuración local
+local.properties
+gradle.properties
+.groovy.properties
+
+# Directorios de IDE específicos
+.vscode
+.idea
+.eclipse
+.project
+.settings
+.classpath
+
+# Archivos generados por herramientas
+tsconfig.tsbuildinfo
+.tsc/
+
+# Archivos de lock específicos
+Gemfile.lock
+poetry.lock
+Pipfile.lock
+
+# Directorios de salida de compiladores
+*.o
+*.a
+*.lib
+*.out
+*.app
+
+# Directorios específicos de marcos
+.nuxt/
+.cache/
+.vuepress/dist/
+.serverless/
+.fusebox/
+.dynamodb/
+.tern-port
+.venv/
+
+# Directorios personalizados potenciales
+local/
+private/
+temp/
+tmp/
+secret/
+secrets/
+
+# Archivos específicos de aplicaciones
+*.pid
+*.seed
+*.pid.lock
+lerna-debug.log*
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# Parcel relacionado
+.cache
+dist/
+
+# Otros
+.tern-port
+.env.test
+.env.*.test
+
+# Directorios que pueden ser creados durante ejecución
+dist/
+build/
+out/
+bin/
+obj/

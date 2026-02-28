@@ -1,0 +1,26 @@
+<div class="container">
+  <h1>Reportes</h1>
+
+  <app-loading-spinner [isLoading]="isLoading" message="Cargando reportes..."></app-loading-spinner>
+
+  <div class="error-message" *ngIf="errorMessage">
+    {{ errorMessage }}
+  </div>
+
+  <div class="reports-grid" *ngIf="!isLoading && reports.length > 0">
+    <div *ngFor="let report of reports" class="report-card">
+      <div class="report-icon">{{ getTypeIcon(report.type) }}</div>
+      <h3>{{ report.name }}</h3>
+      <p class="type-badge">{{ report.type }}</p>
+      <p class="description">{{ report.description }}</p>
+      <div class="report-meta">
+        <span class="date">{{ report.generatedAt | date: 'short' }}</span>
+      </div>
+      <button class="btn btn-small">Ver Detalles</button>
+    </div>
+  </div>
+
+  <div class="empty-state" *ngIf="!isLoading && reports.length === 0">
+    <p>No se encontraron reportes</p>
+  </div>
+</div>
